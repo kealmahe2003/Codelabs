@@ -1,0 +1,71 @@
+## 1. ¿Cuál es el propósito principal de Clean Architecture en el desarrollo de software?
+
+Separar claramente las **responsabilidades** del sistema para lograr un software **independiente, desacoplado y fácilmente mantenible**, facilitando cambios y pruebas.
+
+---
+
+## 2. ¿Qué beneficios aporta Clean Architecture a un microservicio en Spring Boot?
+
+- Facilita el **desacoplamiento de la lógica de negocio**.
+- Mejora la **testabilidad y mantenimiento**.
+- Permite **cambios en la infraestructura sin afectar el núcleo**.
+- Favorece una **estructura clara y escalable**.
+
+---
+
+## 3. ¿Cuáles son las principales capas de Clean Architecture y qué responsabilidad tiene cada una?
+
+1. **Entidad (Domain)**: Reglas y modelos del negocio.  
+2. **Caso de uso (Application)**: Lógica específica de las operaciones del sistema.  
+3. **Interfaz (Interface Adapters)**: Adaptadores, controladores, DTOs.  
+4. **Infraestructura (Frameworks & Drivers)**: DB, web, librerías externas.
+
+---
+
+## 4. ¿Por qué se recomienda desacoplar la lógica de negocio de la infraestructura en un microservicio?
+
+Para **evitar dependencia directa de tecnologías externas** (como bases de datos o frameworks) y así **preservar la estabilidad y portabilidad del núcleo del sistema**.
+
+---
+
+## 5. ¿Cuál es el rol de la capa de aplicación y qué tipo de lógica debería contener?
+
+Coordina **casos de uso** del negocio. Contiene lógica de **flujo, validación y orquestación**, pero no reglas del dominio ni detalles de infraestructura.
+
+---
+
+## 6. ¿Qué diferencia hay entre un UseCase y un Service en Clean Architecture?
+
+- **UseCase**: Ejecuta una operación del negocio, representa una acción.  
+- **Service**: Suele agrupar lógica en capas externas (infraestructura o interfaz), no debe contener reglas del dominio.
+
+---
+
+## 7. ¿Por qué se recomienda definir Repositories como interfaces en la capa de dominio en lugar de usar directamente JpaRepository?
+
+Para lograr **independencia del framework** (Spring Data, JPA), manteniendo el dominio **libre de dependencias externas** y facilitando pruebas.
+
+---
+
+## 8. ¿Cómo se implementa un UseCase en un microservicio con Spring Boot y qué ventajas tiene?
+
+Se define como una clase que implementa una **interfaz de caso de uso**, y es llamada desde controladores o servicios.  
+**Ventajas**: Separación de lógica, alta testabilidad, claridad y reusabilidad.
+
+---
+
+## 9. ¿Qué problemas podrían surgir si no aplicamos Clean Architecture en un proyecto de microservicios?
+
+- **Acoplamiento excesivo** entre capas.  
+- Dificultad para **cambiar infraestructura**.  
+- **Poca testabilidad**.  
+- Costo alto de mantenimiento y escalabilidad.
+
+---
+
+## 10. ¿Cómo Clean Architecture facilita la escalabilidad y mantenibilidad en un entorno basado en microservicios?
+
+- **Divide claramente responsabilidades**.  
+- Permite **evolución independiente** de cada componente.  
+- Facilita **pruebas unitarias** y cambios sin impacto global.  
+- Mejora la **comprensión del sistema y reduce deuda técnica**.

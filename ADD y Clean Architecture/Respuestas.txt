@@ -1,0 +1,75 @@
+## 1. ¿Qué es Attribute-Driven Design (ADD) y cuál es su propósito en el diseño de software?
+
+ADD es un método para diseñar arquitecturas basado en **atributos de calidad** (rendimiento, seguridad, etc.). Su propósito es **alinear la arquitectura con los requisitos no funcionales** del sistema.
+
+---
+
+## 2. ¿Cómo se relaciona ADD con Clean Architecture en el proceso de diseño de sistemas?
+
+ADD define **qué cualidades necesita la arquitectura**; Clean Architecture ofrece una **estructura técnica concreta** para implementarlas, especialmente en separación de responsabilidades y capas.
+
+---
+
+## 3. ¿Cuáles son los pasos principales del método ADD para definir una arquitectura de software?
+
+1. Identificar requerimientos y atributos de calidad.  
+2. Seleccionar módulos principales.  
+3. Aplicar tácticas arquitectónicas.  
+4. Dividir en submódulos.  
+5. Asignar responsabilidades.  
+6. Documentar decisiones.  
+7. Repetir según sea necesario.
+
+---
+
+## 4. ¿Cómo se identifican los atributos de calidad en ADD y por qué son importantes?
+
+Se identifican a través de **requisitos, stakeholders y escenarios de calidad**. Son clave porque **guían decisiones arquitectónicas** más allá de lo funcional.
+
+---
+
+## 5. ¿Por qué Clean Architecture complementa ADD en la implementación de una solución?
+
+Porque **organiza el código en capas independientes**, promoviendo atributos como **mantenibilidad, desacoplamiento y testabilidad**, definidos en ADD.
+
+---
+
+## 6. ¿Qué criterios se deben considerar al definir las capas en Clean Architecture dentro de un proceso ADD?
+
+- Independencia de frameworks y tecnologías.  
+- Direccionalidad de dependencias.  
+- Soporte a atributos de calidad.  
+- Claridad de responsabilidades.
+
+---
+
+## 7. ¿Cómo ADD ayuda a tomar decisiones arquitectónicas basadas en necesidades del negocio?
+
+Traduciendo **necesidades del negocio en atributos de calidad**, lo que permite elegir tácticas y estructuras que **responden directamente a esas necesidades**.
+
+---
+
+## 8. ¿Cuáles son los beneficios de combinar ADD con Clean Architecture en un sistema basado en microservicios?
+
+- Mejor alineación con atributos clave (escalabilidad, resiliencia).  
+- Servicios independientes y desacoplados.  
+- Facilitación de mantenimiento y despliegue.
+
+---
+
+## 9. ¿Cómo se asegura que la arquitectura resultante cumpla con los atributos de calidad definidos en ADD?
+
+- Escenarios de validación (ATAM).  
+- Pruebas específicas (rendimiento, seguridad).  
+- Revisión de decisiones (ADR).  
+- Documentación y monitoreo.
+
+---
+
+## 10. ¿Qué herramientas o metodologías pueden ayudar a validar una arquitectura diseñada con ADD y Clean Architecture?
+
+- **ATAM**  
+- **ADR** (Architecture Decision Records)  
+- **Modelos C4**  
+- **ArchUnit**, **PyArch**, **Roslyn**  
+- **JMeter**, **Locust**, **Chaos Monkey**
